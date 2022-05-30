@@ -1,6 +1,8 @@
 package br.com.jad.api.response;
 
 
+import br.com.jad.api.model.UsuarioModel;
+
 public class UsuarioResponse {
 
     private String nome;
@@ -11,10 +13,10 @@ public class UsuarioResponse {
     public UsuarioResponse() {
     }
 
-    public UsuarioResponse(String nome, Integer idade, String sexo) {
-        this.nome = nome;
-        this.idade = idade;
-        this.sexo = sexo;
+    public UsuarioResponse(UsuarioModel usuarioModel) {
+        this.nome = usuarioModel.getNome();
+        this.idade = usuarioModel.getIdade();
+        this.sexo = usuarioModel.getSexo();
     }
 
     public String getNome() {
